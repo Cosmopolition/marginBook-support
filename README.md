@@ -50,8 +50,10 @@ support/
    - App 详情页 → **Privacy Policy URL** 填 `https://cosmopolition.github.io/marginBook-support/privacy.html`
    - App 详情页 → **Support URL** 填 `https://cosmopolition.github.io/marginBook-support/support.html`
 
-> ⚠️ **Pages 没打开之前，根目录那三页会显示 404** —— 因为它们是纯静态文件，
-> 必须有 GitHub Pages 才会被服务出来。先开 Pages，再去商店填 URL。
+> ✅ **2026-11-24 已开启并上线**（`main` 分支 / `(root)`），仓库为 public。
+> 首屏 200 已实测：`https://cosmopolition.github.io/marginBook-support/privacy.html`。
+> ⚠️ 根目录那三页是**纯静态 + JS 分流** —— 必须有 GitHub Pages 才会被服务出来；
+> 万一 Pages 被关掉，这三条会 404（那时先开 Pages，再去商店填 URL）。
 
 ---
 
