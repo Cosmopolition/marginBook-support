@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MarginBook Privacy Policy — no collection, no upload, no account, no system permissions. Your ledger stays on your own device; the only network traffic is App Store purchases and purchase restoration.">
+  <title>Privacy Policy — MarginBook</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark"></span>MarginBook<span class="latin">Break-Even</span></a>
+    <nav class="lang-switch">
+      <a href="#" class="active">EN</a>
+      <a href="../zh/privacy.html">中文</a>
+      <a href="../ja/privacy.html">日本語</a>
+      <a href="../ko/privacy.html">한국어</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">Privacy Policy</span>
+      <h1>This ledger lives only on your own phone</h1>
+      <p>MarginBook is an offline bookkeeping app: no account, no server, no analytics SDK. Every sale and every cost you record is written to this device — we cannot see it, and we cannot take it away.</p>
+      <p class="updated">Effective 2026-11-24 · Version 1.0.0 · iOS 17 or later on iPhone and iPad</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="privacy.html" class="active">Privacy Policy</a>
+      <a href="support.html">Help Center</a>
+    </nav>
+
+    <section>
+      <p class="section-title">1 · The short version</p>
+      <div class="article">
+        <div class="highlight-box green">
+          <strong>We do not collect any of your personal information.</strong> MarginBook is a ledger that exists only on this device: no account, no email, no device identifier, no advertising identifier (IDFA), no analytics, no crash reporting, no third-party SDKs. Your data is never uploaded, and it is never locked or deleted because you stopped paying.
+        </div>
+        <p>The only time anything goes out is when you tap “Unlock full version” or “Restore purchase” — at that moment Apple’s App Store is talking to you, not us. We never see your Apple ID, your payment method or your bill. Any other time, the App makes no requests and connects to no servers.</p>
+        <p>Below, item by item: what it leaves on your device, what we do not do, and how you can take it away or delete it.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">2 · What we explicitly do not do</p>
+      <div class="article">
+        <ul>
+          <li><strong>We do not collect personal information.</strong> No account, no email, no phone number, no device identifier (IDFA), no advertising tracking.</li>
+          <li><strong>There are no third-party SDKs.</strong> The project contains exactly one local calculation engine package — no analytics, no crash reporting, no ad SDKs, no backend server.</li>
+          <li><strong>We request no system permissions.</strong> Not a single permission usage description in the App’s Info.plist — no camera, no photos, no location, no microphone, no contacts, no calendar.</li>
+          <li><strong>Your photos and files are untouched.</strong> The App has no photo picker and never reads your library, so there is no such thing as GPS coordinates being pulled out of your photos.</li>
+          <li><strong>We do not track you.</strong> NSPrivacyTracking is false in Info.plist, and the list of tracking domains is empty.</li>
+          <li><strong>We make no decisions for you.</strong> No marketing notifications, no profiling, and nothing that pulls you into social or leaderboard features.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">3 · What the App stores on this device</p>
+      <div class="article">
+        <p>All of it lives in the <strong>private sandbox container</strong> iOS gives this App — no other App has permission to read it.</p>
+        <table class="file-table">
+          <thead>
+            <tr><th>What is stored</th><th>What is inside</th><th>Where it lives</th><th>How long it is kept</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ledger entries</td>
+              <td>The amount, category, channel, date and note of each entry (notes are empty by default)</td>
+              <td>A local database in the App’s sandbox (SwiftData)</td>
+              <td>Until you delete it or uninstall the App</td>
+            </tr>
+            <tr>
+              <td>Payment channels / Categories</td>
+              <td>Channel names with their platform fee rates, and category names with the bucket they belong to (revenue / cost of goods / fixed cost / other cost)</td>
+              <td>The same local database</td>
+              <td>Same</td>
+            </tr>
+            <tr>
+              <td>Settings</td>
+              <td>Interface language, currency, market, theme, and whether you have seen the intro screen</td>
+              <td>System preferences storage (UserDefaults)</td>
+              <td>Same</td>
+            </tr>
+            <tr>
+              <td>Unlock status</td>
+              <td>A single “unlocked” flag</td>
+              <td>System preferences storage (UserDefaults)</td>
+              <td>Same</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>None of these records identify you</h3>
+        <p>There is no name, no phone number, no location, no photo and no device identifier in the database. A record looks roughly like this: amount, category, channel, date, note. The note is written by you — what you put in it is your call, and once written it is just a string on your own device.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">4 · System permissions: none at all</p>
+      <div class="article">
+        <p>MarginBook’s Info.plist contains <strong>not a single permission usage description</strong> (NS*UsageDescription). That is why iOS never shows you a prompt for any of these:</p>
+        <ul>
+          <li>Camera, microphone, photo library, photo albums — not requested, and there are no related calls in the code</li>
+          <li>Location (while using / always) — not requested, no coordinates are computed, no location history is kept</li>
+          <li>Contacts, calendar, reminders, health data, Bluetooth — not requested</li>
+          <li>Tracking (App Tracking Transparency) — not requested, and not used</li>
+        </ul>
+        <p>The only system prompts you can ever see are two: Apple’s purchase confirmation sheet, and the system share sheet that opens when you export. Both are drawn by the system.</p>
+        <h3>The two “required reason” APIs</h3>
+        <p>The App does use two iOS required-reason APIs. They are declared in the App’s privacy manifest, and the reason codes ship with the App: UserDefaults (holding currency, language and unlock status — all settings, none of your books) and file timestamps (the moment of export, carried in the export filename). Neither API touches any of your personal data.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">5 · Network: the App Store is the only outbound connection</p>
+      <div class="article">
+        <p>There is not a single line of network code in MarginBook — this is not a promise not to transmit; that code simply does not exist. There is no server address anywhere in the App either.</p>
+        <p>App Store checkout is the only thing that ever talks to the network, in three actions:</p>
+        <table class="file-table">
+          <thead>
+            <tr><th>Action</th><th>When it happens</th><th>Who is talking</th><th>What we receive</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fetch the product and its price</td>
+              <td>When you open the Settings screen</td>
+              <td>Your device ↔ Apple’s App Store</td>
+              <td>The product name, and the localized price for your storefront region (the price text comes from StoreKit — we do not hardcode it)</td>
+            </tr>
+            <tr>
+              <td>Unlock once</td>
+              <td>When you tap “Unlock full version” and approve Apple’s confirmation</td>
+              <td>Same</td>
+              <td>The transaction receipt. Once it validates, we only write an “unlocked” flag on this device</td>
+            </tr>
+            <tr>
+              <td>Restore purchase</td>
+              <td>When you tap “Restore purchase”</td>
+              <td>Same</td>
+              <td>Same — used to confirm that the Apple account on this device has bought it</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="highlight-box seal">
+          <strong>Restoring a purchase also goes online.</strong> Many people assume “only the moment of payment is online”, but restoring a non-consumable purchase has to look up your receipt in the store sandbox — so the accurate statement is: <strong>the App goes online when you buy or restore a purchase</strong>, and never while you record entries, view reports or export.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">6 · App Store privacy labels, item by item</p>
+      <div class="article">
+        <p>This table is the same story as the privacy labels shown for this App on the App Store.</p>
+        <table class="file-table">
+          <thead>
+            <tr><th>Category</th><th>MarginBook</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Name / Email / Phone</td><td>Not collected</td></tr>
+            <tr><td>Location</td><td>Not collected (and no permission is requested)</td></tr>
+            <tr><td>Photos or Videos</td><td>Not collected (there is no photo picker)</td></tr>
+            <tr><td>User Content</td><td>Notes you write stay on this device and are never uploaded</td></tr>
+            <tr><td>Browsing History / Search History</td><td>Not applicable</td></tr>
+            <tr><td>Identifiers</td><td>Not collected (no IDFA, no device ID)</td></tr>
+            <tr><td>Purchase History</td><td>Not collected by us. Apple handles the transaction; we only write an “unlocked” flag on this device</td></tr>
+            <tr><td>Usage Data / Diagnostics</td><td>Not collected</td></tr>
+            <tr><td>Crash Data</td><td>Not collected (the App contains no crash-reporting SDK)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">7 · Data security and retention</p>
+      <div class="article">
+        <ul>
+          <li><strong>Where it lives.</strong> A local directory inside the App’s sandbox. iOS gives every App a private container that no other App is allowed to read.</li>
+          <li><strong>Is it encrypted.</strong> We do not add application-level encryption — that is a deliberate trade-off: plain text buys you the ability to open your own numbers and check them at any time. The cost is that there is no extra layer of protection, and we are saying so here instead of pretending otherwise. The device’s own lock screen and file protection (Data Protection) still apply, enforced by iOS.</li>
+          <li><strong>How long it is kept.</strong> Until you delete it, uninstall the App, or erase the device.</li>
+          <li><strong>Do we keep a copy.</strong> No. We have no server, no backup service and no background job that transmits data, so there is no copy of yours sitting on our side.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">8 · Export and sharing: the only way data leaves is you</p>
+      <div class="article">
+        <p>The App has a “Settings › Data › Export data” screen. Tapping it writes a file into the App’s temporary directory and opens the system share sheet, where you decide who gets it and where it goes.</p>
+        <table class="file-table">
+          <thead>
+            <tr><th>Format</th><th>What is inside</th><th>Free or unlocked</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CSV</td>
+              <td>A detail sheet, one row per entry</td>
+              <td>Always free</td>
+            </tr>
+            <tr>
+              <td>Excel (.xlsx)</td>
+              <td>5 sheets — detail, categories, channels, monthly, notes; the amounts are real numbers you can sum directly</td>
+              <td>Unlocked by purchase</td>
+            </tr>
+            <tr>
+              <td>Monthly business report (.pdf)</td>
+              <td>One page: what you made, the minimum you must sell each day, and your three biggest costs</td>
+              <td>Unlocked by purchase</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="highlight-box">
+          Once the file is generated, it is entirely in your hands. We do not know who you sent it to — every step after the share sheet happens between you and the recipient. We have no endpoint that receives files, and we cannot read what you sent.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">9 · New device, uninstall and backups</p>
+      <div class="article">
+        <ul>
+          <li><strong>Uninstalling the App deletes the data.</strong> When iOS removes an App it removes its sandbox container too, and nothing is left where another App could reach it.</li>
+          <li><strong>Switching phones.</strong> MarginBook does no iCloud / CloudKit sync, so there is no automatic path between two devices. Two ways to carry your data over: ① Use “Export data › Export CSV” to generate a file, save it in the Files app or send it to yourself — note that CSV is a format for you and your accountant to read, not an import format for the App; ② Rely on the iOS device backup (an iCloud backup, or a backup to a connected computer) to migrate the whole App, provided the backup includes this App.</li>
+          <li><strong>iCloud backups need to be spelled out.</strong> If you have iCloud backup turned on, iOS encrypts and backs up what is in the App’s sandbox to Apple together with every other App’s data. That is the operating system’s device backup, not a sync to our servers — we have no servers, and we cannot read that backup.</li>
+          <li><strong>Reinstalling the App.</strong> The App itself can be downloaded again. Your purchase lives in the store sandbox, so tap “Restore purchase” after reinstalling and it comes back.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">10 · Children’s privacy</p>
+      <div class="article">
+        <p>MarginBook is not designed for children under 13, and it does not knowingly collect children’s personal information. Because it collects no personal information at all, there are no exceptions to this.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">11 · Your rights</p>
+      <div class="article">
+        <table class="file-table">
+          <thead>
+            <tr><th>What you want to do</th><th>How to do it</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>See what is recorded</td><td>The home screen and the “Entries” tab list every entry</td></tr>
+            <tr><td>Edit an entry</td><td>Tap that entry on the Entries screen → Edit</td></tr>
+            <tr><td>Delete one entry or all of them</td><td>Delete it from the Entries screen, or just uninstall the App</td></tr>
+            <tr><td>Take your data with you</td><td>Settings › Data › Export data › Export CSV (always free)</td></tr>
+            <tr><td>Withdraw a permission</td><td>This App has no permissions to withdraw</td></tr>
+            <tr><td>Ask something else</td><td>Write to us — the address is at the bottom of the page</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">12 · Changes to this policy</p>
+      <div class="article">
+        <p>If this policy changes, the effective date at the top of this page changes with it, and the “Settings › About › Terms &amp; Privacy” screen inside the App is updated too. When a change affects what is collected, it is spelled out in the App’s release notes.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">13 · The official address of this policy</p>
+      <div class="article">
+        <p>The official address of this policy (if someone forwarded you a copy, this is the one that counts):</p>
+        <p><a href="https://cosmopolition.github.io/marginBook-support/privacy.html">https://cosmopolition.github.io/marginBook-support/privacy.html</a></p>
+        <p>If something is wrong, or you think we wrote it badly, write to us — the address is at the bottom of the page. We read every email, and we reply to every one.</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">14 · Contact us</p>
+      <div class="article">
+        <p>We read every privacy email, and we reply to every one. Please include: your device model and OS version, the App version, and what you were doing at the time. A screenshot of the screen helps if you can — but you do <strong>not</strong> need to send us your ledger; reproducing a problem never requires your books.</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <div class="contact-section">
+      <h2>Questions?</h2>
+      <p>We read every privacy email, and we reply to every one.</p>
+      <a href="mailto:peer2peer.wang@gmail.com" class="contact-btn">✉ Email us</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 MarginBook · Your ledger stays on your own device · <a href="mailto:peer2peer.wang@gmail.com">Contact us</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

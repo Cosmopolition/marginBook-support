@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MarginBook Help Center — does it use the network, where your data is stored, how to carry it to a new phone, what the one-time unlock adds, and why break-even sometimes cannot be calculated.">
+  <title>Help Center — MarginBook</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark"></span>MarginBook<span class="latin">Break-Even</span></a>
+    <nav class="lang-switch">
+      <a href="#" class="active">EN</a>
+      <a href="../zh/support.html">中文</a>
+      <a href="../ja/support.html">日本語</a>
+      <a href="../ko/support.html">한국어</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">Help Center</span>
+      <h1>These are probably the things you came to ask</h1>
+      <p>The common questions about your data, the network, switching phones and the one-time unlock. We put it up front: what the App records stays on this device, and the only network traffic is App Store purchases and purchase restoration.</p>
+      <p class="updated">Effective 2026-11-24 · Version 1.0.0 · iOS 17 or later on iPhone and iPad</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html" class="active">Help Center</a>
+    </nav>
+
+    <section>
+      <p class="section-title">1 · The short answer</p>
+      <div class="article">
+        <table class="file-table">
+          <thead>
+            <tr><th>What you are wondering</th><th>The answer</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Does my data leave this device</td><td>No. It only talks to Apple’s App Store when you buy or restore a purchase</td></tr>
+            <tr><td>Do I need an account</td><td>No. There is no email, no phone number and no identifying information either</td></tr>
+            <tr><td>Is my data still there after uninstalling</td><td>No. Uninstalling the App deletes its sandbox container</td></tr>
+            <tr><td>How do I carry my data to a new phone</td><td>Export CSV (always free), or migrate it with an iOS device backup</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">2 · Frequently asked questions</p>
+
+      <details class="faq-item">
+        <summary>Does MarginBook use the network? Where does my data go?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>Not while you work. There is no network request anywhere in the App’s code — recording entries, viewing reports, calculating break-even and exporting all happen on this device.</p>
+          <p>Only three App Store actions go online: fetching the product and its price when you open the Settings screen, starting a purchase when you tap “Unlock full version”, and checking your receipt in the store sandbox when you tap “Restore purchase”. All three are handled by Apple’s system frameworks — we never see your Apple ID, your payment method or your bill.</p>
+          <p><strong>Your ledger has never left this device.</strong></p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do I need to sign up?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>No — and no email, no phone number, no identifying information of any kind. Download it and go; close it and open it again later, and it is the same ledger.</p>
+          <p>There is no login, no cloud account, and no step that says “sign up before you can use it”.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Where is my data stored? Can other Apps see it?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>It is in the <strong>private sandbox</strong> iOS gives this App. The ledger, the channels, the categories and the settings all live inside that one container.</p>
+          <p>No other App has permission to read what is in here, and MarginBook has no channel that uploads it — so “another App sees my numbers” is not something that can happen with this App.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>I am switching phones — how do I take my data with me?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>MarginBook does no cloud sync, so there is no automatic path between two devices. Two ways:</p>
+          <p>① <strong>Export CSV</strong>: Settings › Data › Export data › Export CSV (always free). Save the file in the Files app or send it to yourself. Note that CSV is a format for you and your accountant to read, not an import format for the App — after you switch, the next route is the one you want.</p>
+          <p>② <strong>Use the iOS device backup</strong>: an iCloud backup or a backup to a connected computer migrates the whole App data, provided your backup includes this App.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Will uninstalling the App delete my ledger?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>Yes. When iOS removes an App it removes its sandbox container too.</p>
+          <p>That is the price of “your data stays on this device”, and we are stating it here rather than hiding it. If the numbers matter, export a CSV first and keep a copy.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>I have iCloud backup on — does that count as MarginBook uploading to the cloud?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>No. That is the <strong>operating system’s device backup</strong>: with iCloud backup on, iOS encrypts and backs up the files in the App’s sandbox to Apple together with every other App’s data.</p>
+          <p>MarginBook has no server, no backup service and no background sync task — we cannot see that backup, and there is no other way in to it.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What can the free version do? What does the one-time unlock add?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p><strong>Three things are free forever:</strong> recording entries (no limit on how many), CSV export, and break-even plus gross and net profit with history. None of these disappear because you did not buy the unlock.</p>
+          <p><strong>The unlock adds three things:</strong> multi-sheet Excel export, a one-page monthly business report as PDF, and custom payment channels and categories (only after the unlock does the whole “Settings › Bookkeeping › Payment channels / Categories” group appear).</p>
+          <p>The unlock is <strong>one-time</strong>, not a subscription. It never expires, and it is never taken back because development stopped or the price went up. The price shown in the App Store varies by region.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>I already bought it — why does the new phone still say locked?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>Tap Settings › Unlock full version › Restore purchase. The status there becomes Unlocked · thank you.</p>
+          <p>The receipt for a non-consumable lives in the store sandbox, so if you do not restore it the purchase is as if it never happened — restoring checks it online once, and that is exactly why we put “Restore purchase” where it is easy to find in Settings.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Why can break-even sometimes not be calculated?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>It is not broken — it genuinely cannot be computed. The App tells you which one it is instead of inventing a number for you. Four cases:</p>
+          <p>① <strong>No entries this month yet</strong> — log a few first;<br>② <strong>No income recorded yet</strong> — with no money received there is no break-even to talk about;<br>③ <strong>Gross profit is negative</strong> — selling more loses more right now, so sort out the cost structure first;<br>④ <strong>No fixed costs recorded</strong> — stall fee, rent and wages have to be logged as “Fixed costs” so that break-even has something to divide by.</p>
+          <p>Once it can be computed, the home screen shows the number rounded up to the major unit (for example ¥362.77 is shown as ¥363.00), and the gap is measured against that rounded line — so the difference you see is always a difference you can actually close.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Who is each of the three export files for?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p><strong>CSV</strong> — a detail sheet, one row per entry, for your accountant or for you to read through. <strong>Always free</strong>.</p>
+          <p><strong>Excel (.xlsx)</strong> — 5 sheets: detail, categories, channels, monthly and notes. The amounts are real numbers you can sum directly, so hand it to whoever continues working on the spreadsheet. <strong>Unlocked by purchase</strong>.</p>
+          <p><strong>Monthly business report (.pdf)</strong> — one page: what you made this month, the minimum you must sell each day, and your three biggest costs — for your own review, or for your boss or family. <strong>Unlocked by purchase</strong>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>I sent an exported file to someone — can you see it?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>No. The export writes a file into the App’s temporary directory and opens the system share sheet; every step after that happens between you and the recipient.</p>
+          <p>We have no server, and no endpoint that receives files.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Will the App ask me for camera, photo or location permissions?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>No. There is not a single permission usage description in the App’s Info.plist, and the code has no camera, album or location calls.</p>
+          <p>The only system prompt you will ever see is Apple’s purchase confirmation sheet, and the share sheet when you export.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Which languages and currencies are supported?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>The interface supports Simplified Chinese, English, 日本語 and 한국어. You can switch at any time in Settings › General › Language, and the change takes effect immediately.</p>
+          <p>The currency follows your storefront market by default, but you can lock it yourself (Settings › General › Currency). “Market” is a separate setting: <strong>your channels and cost structure follow where you do business, not the language of the interface</strong> — you may be running an English interface while accounting for a European or American market.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I request a feature or report a bug?<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>Yes. Write to us — the address is at the bottom of the page.</p>
+          <p>Please include: your device model and OS version, the App version, what you were doing at the time, and a screenshot of the screen if you have one. <strong>But do not send us your ledger</strong> — reproducing a problem never requires your books.</p>
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <p class="section-title">3 · Still stuck?</p>
+      <div class="article">
+        <h3>Bring us these three things</h3>
+        <p>Your device model and OS version, the App version, and a screenshot of the screen. With those three we can usually reproduce it; without them we usually end up asking you several times over.</p>
+        <h3>The official address of this help center</h3>
+        <p>If someone forwarded you a copy, this is the one that counts:</p>
+        <p><a href="https://cosmopolition.github.io/marginBook-support/support.html">https://cosmopolition.github.io/marginBook-support/support.html</a></p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <div class="contact-section">
+      <h2>Still stuck?</h2>
+      <p>We read every email, and we reply to every one.</p>
+      <a href="mailto:peer2peer.wang@gmail.com" class="contact-btn">✉ Email us</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 MarginBook · Your ledger stays on your own device · <a href="mailto:peer2peer.wang@gmail.com">Contact us</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

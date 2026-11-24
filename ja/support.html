@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MarginBook ヘルプセンター —— 通信するか、データはどこにあるか、機種変更はどうする、買い切りで何が開くのか、損益分岐点が計算できない理由。">
+  <title>ヘルプセンター — MarginBook</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark"></span>MarginBook<span class="latin">Break-Even</span></a>
+    <nav class="lang-switch">
+      <a href="../en/support.html">EN</a>
+      <a href="../zh/support.html">中国語</a>
+      <a href="#" class="active">日本語</a>
+      <a href="../ko/support.html">한국어</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">ヘルプセンター</span>
+      <h1>あなたが聞きたいのは、たぶん次のことです</h1>
+      <p>データ、通信、機種変更、買い切りについてによくある質問です。先に結論から：App が記録するものはこの端末の中だけで、通信するのは App Store の購入と購入の復元のときだけです。</p>
+      <p class="updated">有効日 2026-11-24　·　適用バージョン 1.0.0　·　iOS 17 以降の iPhone と iPad に対応</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="support.html" class="active">ヘルプセンター</a>
+    </nav>
+
+    <section>
+      <p class="section-title">1 · 一目でわかる</p>
+      <div class="article">
+        <table class="file-table">
+          <thead>
+            <tr><th>気になること</th><th>答え</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>データはこの端末から出るのか</td><td>出ません。購入と購入の復元のときだけ Apple の App Store と通信します</td></tr>
+            <tr><td>アカウント登録は必要か</td><td>不要です。メールも電話番号も、身分を示す情報もありません</td></tr>
+            <tr><td>アンインストール後もデータが残るか</td><td>残りません。App をアンインストールすると、サンドボックスコンテナも一緒に削除されます</td></tr>
+            <tr><td>機種変更のデータはどうする</td><td>CSV を書き出す（ずっと無料）、または iOS のデバイスバックアップで移行します</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">2 · よくある質問</p>
+
+      <details class="faq-item">
+        <summary>MarginBook は通信しますか？私のデータはどこに送られますか？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>普段は通信しません。App のコードにはネットワークリクエストが一切なく、記帳も、レポートの閲覧も、損益分岐点の計算も、書き出しも、すべてこの端末の中で終わります。</p>
+          <p>通信するのは App Store に関する 3 つの操作だけです。設定画面を開いたときに商品と価格を取りに行く 1 回、「フル版をアンロック」を押して購入を開始する 1 回、「購入を復元」を押してストアのサンドボックスで証明書を確認する 1 回。いずれも Apple のシステムフレームワークが行うもので、あなたの Apple ID・支払い方法・請求情報が私たちに届くことはありません。</p>
+          <p><strong>帳簿の中身が、この端末から外れたことは 1 度もありません。</strong></p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>アカウント登録は必要ですか？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>必要ありません。メールも電話番号も、身分を示す情報も要りません。ダウンロードしてすぐに使えます。閉じてまた開いても、帳簿はそのまま残っています。</p>
+          <p>App にログインもクラウドアカウントも、「登録してから使う」というステップもありません。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>私のデータはどこに保存されますか？他の App から見られますか？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>iOS がこの App に割り当てた<strong>プライベートサンドボックス</strong>の中に保存されます。同じ App の帳簿、チャネル、カテゴリ、設定は、このコンテナの中に収まっています。</p>
+          <p>他の App に読み取る権限はなく、MarginBook がそれをアップロードする経路もありません。だから「他の App が私の明細を見る」ようなことは、この App では起こりません。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>機種を変更したら、データをどう持ち運べばいいですか？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>MarginBook はクラウド同期を行いません。2 台の間には自動的な経路がありません。方法は 2 つ。</p>
+          <p>① <strong>CSV を書き出す</strong>：設定 › データ › データを書き出す › CSV を書き出す（ずっと無料）で生成したファイルを「ファイル」App に保存するか、自分宛てに送信します。CSV はあなたや会計が見るための形式で、App へ読み込むためのインポート形式ではない点に注意してください。機種変更後のデータは、次の方法を使う必要があります。</p>
+          <p>② <strong>iOS のデバイスバックアップを利用する</strong>：iCloud バックアップ、または PC に接続して行うバックアップで App のデータごと移行します。前提は、バックアップにこの App が含まれていることです。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>App をアンインストールすると帳簿は消えますか？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>消えます。iOS は App をアンインストールするとき、サンドボックスコンテナも一緒に削除します。</p>
+          <p>これは「データは端末の中だけ」ということの代償です。隠さず、ここに書いています。大事なデータはあらかじめ CSV を書き出しておく半分を。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>iCloud バックアップを有効にしていますが、これは「MarginBook がクラウドにアップロードした」ことですか？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>違います。あれは<strong>OS のデバイスバックアップ</strong>です。iCloud バックアップを有効にしている場合、App サンドボックス内のファイルは、ほかの App のデータと一緒に iOS が暗号化して Apple にバックアップします。</p>
+          <p>MarginBook 自身にサーバーも、バックアップサービスも、バックグラウンドの同期処理もありません。私たちはそのバックアップを見ることもできず、ほかの経路で入手することもできません。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>無料版で何ができますか？買い切りで増えるものは？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p><strong>ずっと無料 3 つ：</strong>記帳（件数は無制限）、CSV の書き出し、損益分岐点と粗利・純利および過去分の閲覧。この 3 つは、買い切りしていないからといって消えません。</p>
+          <p><strong>買い切りで解禁される 3 つ：</strong>Excel の複数シート書き出し、1 ページの月次レポート PDF、そして決済チャネルとカテゴリのカスタマイズ（買い切り後は、設定画面に「設定 › 記帳 › 決済チャネル / 分類」というまとまりが現れます）。</p>
+          <p>買い切りは<strong>一度きり</strong>で、購読ではなく、期限も切れず、サポートの終了や値上げを理由に取り消されることもありません。価格は App Store の表示に従ってください。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>購入済みですが、機種変更後に「未アンロック」と表示されます<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>設定 › フル版をアンロック › 購入を復元 を押してください。</p>
+          <p>消費型でない商品の証明書はストアのサンドボックスにあるので、復元しないままでは購入が無駄になります。復元のときに 1 回だけ通信して確認します。これは「購入を復元」を設定画面の目につきやすい位置に置いている理由でもあります。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>損益分岐点が計算できないのはどんなときですか？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>壊れているのではなく、実際に計算できないだけです。App はどの条件に合っているかをそのまま表示します。その場しのぎの数字を作ることはありません。4 つの場合があります。</p>
+          <p>① <strong>今月の記録がまだない</strong> —— まず数件記録してください。<br>② <strong>売上の記録がまだない</strong> —— 実収がなければ損益分岐点の話になりません。<br>③ <strong>粗利がマイナス</strong> —— 今は売るほど赤字です。コスト構造を整理しましょう。<br>④ <strong>固定費を入力していない</strong> —— 出店料、家賃、人件費などは「固定費」カテゴリで 1 件記録すると、損益分岐点には分母ができます。</p>
+          <p>計算されると、ホームには主単位に切り上げた値が表示されます（例：¥362.77 は ¥363.00 と表示）。「あといくら必要か」も切り上げ後の線で計算しています —— だから、表示される差額は必ず埋められます。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>書き出しできる 3 種類のファイルは、それぞれ誰のものですか？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p><strong>CSV</strong> —— 明細表。1 行に 1 件。会計に見せる用、あるいは自分で確認する用です。<strong>ずっと無料</strong>。</p>
+          <p><strong>Excel（.xlsx）</strong> —— 明細・カテゴリ・チャネル・月次・説明の 5 シート。金額は数値なのでそのまま合計でき、引き継いで表を作り直したい人向けです。<strong>買い切りで解除</strong>。</p>
+          <p><strong>月次レポート（.pdf）</strong> —— 1 ページ。いくら稼いだか、1 日に最低いくら売ればよいか、どれだけコストがかかっているか。自分で振り返る用にも、店主や家族に見せる用にも。<strong>買い切りで解除</strong>。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>書き出したファイルを転送しました。あなたたちは見られますか？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>見られません。書き出しは App の一時フォルダにファイルを生成し、システムの共有パネルが立ち上がるまでです。その後のすべては、あなたと受取人のあいだで起こります。</p>
+          <p>私たちにサーバーはなく、ファイルを受け取る仕組みもありません。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>App はカメラ・写真・位置の権限を求めますか？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>求めません。App の Info.plist には用途説明が 1 件もなく、コードにもカメラ・アルバム・位置に関する呼び出しはありません。</p>
+          <p>表示されるシステムダイアログは、Apple の購入確認ダイアログと、書き出しを押したときに開く共有パネルだけです。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>対応している言語と通貨は？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>UI は中文・English・日本語・한국어 の 4 言語に対応しています。設定 › 一般 › 言語 / 通貨 / 市場 でいつでも切り替えられ、すぐに反映されます。</p>
+          <p>通貨は既定ではストアの市場に従いますが、固定することもできます（設定 › 一般 › 通貨）。さらに「市場」は独立した項目です：<strong>チャネルとコスト構成は、画面表示の言語ではなく、あなたが商いをしている場所に従います</strong> —— 日本語の画面を使っていても、欧米の市場を計算していることがあります。</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>要望やバグを報告できますか？<span class="arrow">▾</span></summary>
+        <div class="answer">
+          <p>できます。メールを送ってください。アドレスはこのページの下にあります。</p>
+          <p>次を添えてください：端末のモデルと OS のバージョン、App のバージョン番号、当時の操作内容。画面のスクリーンショットがあれば、それもお送りください。<strong>ただし帳簿の中身を送る必要はありません</strong> —— 問題の再現に取引の明細は必要ありません。</p>
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <p class="section-title">3 · まだ解決しませんか？</p>
+      <div class="article">
+        <h3>メールを書くときに添える 3 つ</h3>
+        <p>端末のモデルと OS のバージョン、App のバージョン番号（表示は「バージョン 1.0.0」になります）、当時の画面のスクリーンショット。この 3 つがあれば、たいてい再現できます。なければ、たいてい往復で何度もやり取りが必要になります。</p>
+        <h3>このヘルプセンターの正式 URL</h3>
+        <p>誰かから転送されたコピーを持っている場合は、このアドレスを基準にしてください：</p>
+        <p><a href="https://cosmopolition.github.io/marginBook-support/support.html">https://cosmopolition.github.io/marginBook-support/support.html</a></p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <div class="contact-section">
+      <h2>まだ解決しませんか？</h2>
+      <p>1 通ずつ読み、1 通ずつ返信します。</p>
+      <a href="mailto:peer2peer.wang@gmail.com" class="contact-btn">✉ メールで問い合わせる</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 MarginBook · 帳簿はこの端末の中だけに · <a href="mailto:peer2peer.wang@gmail.com">お問い合わせ</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

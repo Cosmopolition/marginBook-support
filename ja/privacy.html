@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MarginBook プライバシーポリシー —— 収集せず、アップロードせず、アカウントなし、システム権限も一切要求しません。帳簿はあなたの端末の中だけにあり、唯一の通信は App Store の購入と購入の復元です。">
+  <title>プライバシーポリシー — MarginBook</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark"></span>MarginBook<span class="latin">Break-Even</span></a>
+    <nav class="lang-switch">
+      <a href="../en/privacy.html">EN</a>
+      <a href="../zh/privacy.html">中国語</a>
+      <a href="#" class="active">日本語</a>
+      <a href="../ko/privacy.html">한국어</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">プライバシーポリシー</span>
+      <h1>この帳簿は、あなたの端末の中だけに</h1>
+      <p>MarginBook はオフラインで動く店舗簿記 App です。アカウントもサーバーも解析 SDK もありません。記録した売上も費用もすべてこの端末の中だけに保存され、私たちが見ることも、持ち去ることもできません。</p>
+      <p class="updated">有効日 2026-11-24　·　適用バージョン 1.0.0　·　iOS 17 以降の iPhone と iPad に対応</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="privacy.html" class="active">プライバシーポリシー</a>
+      <a href="support.html">ヘルプセンター</a>
+    </nav>
+
+    <section>
+      <p class="section-title">1 · 一言でまとめると</p>
+      <div class="article">
+        <div class="highlight-box green">
+          <strong>私たちはあなたの個人情報を一切収集しません。</strong>MarginBook はこの端末の中だけに存在する帳簿です。アカウントも、メールアドレスも、デバイス識別子も、広告識別子（IDFA）もありません。計測の統計も、クラッシュの送信もなく、サードパーティ SDK もありません。データがアップロードされることはなく、購読をやめた途端にロックされたり削除されたりすることもありません。
+        </div>
+        <p>唯一の「外へ出る」通信は、「フル版をアンロック」または「購入を復元」を押した瞬間にだけ起こります。そのときに通信しているのは Apple の App Store なので、あなたの Apple ID・支払い方法・請求情報までが私たちに届くことはありません。それ以外で、App はリクエストを送らず、サーバーにも接続しません。</p>
+        <p>以下では順に、端末に何が残るか、私たちが何をしないか、そしてあなたがデータを取り出したり消したりする方法を書きます。</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">2 · 明確にやっていないこと</p>
+      <div class="article">
+        <ul>
+          <li><strong>個人情報を収集しません。</strong>アカウントも、メールアドレスも、電話番号も、デバイス識別子（IDFA）も、広告トラッキングもありません。</li>
+          <li><strong>サードパーティ SDK はありません。</strong>内部にあるのは、計算するためのローカルエンジン 1 つだけ。分析・統計も、クラッシュ報告も、広告 SDK も、バックグラウンドのサーバーもありません。</li>
+          <li><strong>システム権限を 1 件も要求しません。</strong>App の Info.plist には用途説明が 1 件もありません —— カメラ、写真、位置、マイク、連絡先、カレンダーは、どれも要求しません。</li>
+          <li><strong>写真やファイルには触れません。</strong>写真を選ぶ機能がないため、写真ライブラリを読むこともありません。「写真に埋まった GPS 座標が持ち出される」ようなことも起こりません。</li>
+          <li><strong>トラッキングをしません。</strong>Info.plist の NSPrivacyTracking は false で、追跡ドメインのリストも空です。</li>
+          <li><strong>あなたの代わりに決定はしません。</strong>マーケティング通知を送らず、利用者のプロフィールを作らず、ソーシャルやランキングの機能に参加させることもしません。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">3 · この端末に記録されるもの</p>
+      <div class="article">
+        <p>すべて、iOS がこの App に割り当てた<strong>プライベートサンドボックス</strong>の中にあります。他の App には読み取る権限がありません。</p>
+        <table class="file-table">
+          <thead>
+            <tr><th>記録するもの</th><th>中身</th><th>保存場所</th><th>保存期間</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>帳簿の記録</td>
+              <td>1 件ごとの金額・カテゴリ・チャネル・日付・メモ（メモは初期状態では空）</td>
+              <td>App サンドボックス内のローカルデータベース（SwiftData）</td>
+              <td>あなたが削除するか、App をアンインストールするまで</td>
+            </tr>
+            <tr>
+              <td>決済チャネル / 分類</td>
+              <td>チャネル名とプラットフォーム手数料、カテゴリ名と所属する区分（売上 / 原価 / 固定費 / その他の経費）</td>
+              <td>同じローカルデータベース</td>
+              <td>同上</td>
+            </tr>
+            <tr>
+              <td>設定の保存内容</td>
+              <td>UI の言語、通貨、市場、テーマ、案内画面を見たかどうか</td>
+              <td>システム設定の保存領域（UserDefaults）</td>
+              <td>同上</td>
+            </tr>
+            <tr>
+              <td>買い切り状態</td>
+              <td>「アンロック済み · ありがとうございます」という 1 つのフラグ</td>
+              <td>システム設定の保存領域（UserDefaults）</td>
+              <td>同上</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>この記録にあなたの身元はありません</h3>
+        <p>データベースに氏名も、電話番号も、位置も、写真も、デバイス識別子もありません。1 件の記録はおおむね、金額・カテゴリ・チャネル・日付・メモだけです。メモはあなたが書いたもので、何を書くかはあなた次第。書いたら、この端末の中に 1 本の文字列として残るだけです。</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">4 · システム権限：1 件も要求しません</p>
+      <div class="article">
+        <p>MarginBook の Info.plist には<strong>用途説明が 1 件もありません</strong>（NS*UsageDescription）。そのため、次の権限についてシステムがダイアログを出すこと自体ありません。</p>
+        <ul>
+          <li>カメラ、マイク、写真ライブラリ、アルバム —— 要求しません。コードに関連した呼び出しもありません</li>
+          <li>位置（使用中 / 常に）—— 要求しません。座標の変換もしません。位置履歴も残しません</li>
+          <li>連絡先、カレンダー、リマインダー、ヘルスデータ、Bluetooth —— 要求しません</li>
+          <li>トラッキング（App Tracking Transparency）—— 要求しません。使うこともありません</li>
+        </ul>
+        <p>表示されるシステムダイアログは 2 つだけです。Apple の購入確認ダイアログと、書き出しを押したときに開くシステムの共有パネル。どちらもシステムが描画します。</p>
+        <h3>2 つの「必須理由 API」</h3>
+        <p>App は iOS が定めた必須理由 API を 2 つだけ使っています。どちらも App のプライバシーマニフェストで申告済みで、理由コードは App と一緒に提出されています。1 つは UserDefaults（通貨・言語・買い切り状態を保存するためのもの。すべて設定値で、あなたの取引内容は含まれません）、もう 1 つはファイルの作成・更新時刻（書き出すファイル名に書き出し時刻を付けます）です。どちらの API も、あなたの個人データを読むものではありません。</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">5 · 通信：唯一の外向き通信は App Store</p>
+      <div class="article">
+        <p>MarginBook のコードにはネットワークリクエストが 1 行もありません。「送信しない」と宣言しているのではなく、そのコード自体が書かれていないのです。App の中にサーバーアドレスも 1 つありません。</p>
+        <p>ネットワーク通信が起きるのは App Store の精算だけ。大きく 3 つの操作があります。</p>
+        <table class="file-table">
+          <thead>
+            <tr><th>操作</th><th>起きるタイミング</th><th>通信する相手</th><th>私たちが手に入るもの</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>商品と価格の取得</td>
+              <td>設定画面を開いたとき</td>
+              <td>あなたの端末 ↔ Apple の App Store</td>
+              <td>商品名と、お住まいのストア地域のローカライズされた価格（価格表示は StoreKit が返すもので、私たちが固定したものではありません）</td>
+            </tr>
+            <tr>
+              <td>買い切り</td>
+              <td>「フル版をアンロック」を押して Apple の確認を通したとき</td>
+              <td>同上</td>
+              <td>取引の証明書。検証に通ったあと、私たちがこの端末に記録するのは「アンロック済み」というフラグだけです</td>
+            </tr>
+            <tr>
+              <td>購入を復元</td>
+              <td>「購入を復元」を押したとき</td>
+              <td>同上</td>
+              <td>同上 —— この端末に対応する Apple アカウントで購入済みかどうかを確認するため</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="highlight-box seal">
+          <strong>購入の復元も通信します。</strong>「支払いをする一瞬だけしか通信しない」と思っている人が多くありますが、消費型でない商品の購入を復元するには、ストアのサンドボックスで証明を確認する必要があります。正確に言えば、<strong>購入と購入の復元のときだけ通信します</strong>。通常の記帳、レポートの閲覧、書き出しは、一切通信しません。
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">6 · App Store のプライバシーラベルとの対照</p>
+      <div class="article">
+        <p>下の表は、App Store に掲載しているこの App のプライバシーラベルと同じ基準です。</p>
+        <table class="file-table">
+          <thead>
+            <tr><th>カテゴリ</th><th>MarginBook の場合</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>氏名 / メールアドレス / 電話番号</td><td>収集しません</td></tr>
+            <tr><td>位置</td><td>収集しません（権限も要求しません）</td></tr>
+            <tr><td>写真または動画</td><td>収集しません（写真を選ぶ機能はありません）</td></tr>
+            <tr><td>ユーザーのコンテンツ</td><td>あなたが書いたメモは端末の中だけに保存され、アップロードされません</td></tr>
+            <tr><td>閲覧履歴 / 検索履歴</td><td>該当なし</td></tr>
+            <tr><td>識別子</td><td>収集しません（IDFA も、端末 ID も使いません）</td></tr>
+            <tr><td>購入履歴</td><td>私たちが収集するものではありません。取引は Apple が処理し、私たちが端末に記録するのは「アンロック済み」というフラグだけです</td></tr>
+            <tr><td>利用データ / 診断</td><td>収集しません</td></tr>
+            <tr><td>クラッシュ統計</td><td>収集しません（App にクラッシュ報告の SDK はありません）</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">7 · データの保管と保存期間</p>
+      <div class="article">
+        <ul>
+          <li><strong>どこに保存されるか。</strong>App サンドボックス内のローカルディレクトリ。iOS は App ごとにプライベートなコンテナを割り当てており、他の App には読み取る権限がありません。</li>
+          <li><strong>暗号化するか。</strong>アプリ層の暗号化は行っていません。これは意図した取舍です —— 平文にすることで「あなたがいつでも自分で開いて確かめられる」状態を保てるからです。代償として、もう 1 層の保護はありません。ここではそれを正直に書いてあり、保護されているかのように思わせることもありません。端末自体のロック画面とファイル保護（Data Protection）は、引き続き iOS の仕組みとして働きます。</li>
+          <li><strong>保存期間。</strong>あなたが削除するか、App をアンインストールするか、端末のデータを消去するまで。</li>
+          <li><strong>私たち側にコピーはあるか。</strong>ありません。サーバーも、バックアップサービスも、データを送るバックグラウンド処理も持っていないので、「私たちも控えを 1 部残している」ということもありません。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">8 · 書き出しと共有：データが外に出る唯一の出口はあなた自身</p>
+      <div class="article">
+        <p>App には「設定 › データ › データを書き出す › CSV を書き出す（ずっと無料）」があります。押すと App の一時フォルダにファイルが生成され、システムの共有パネルが立ち上がります。誰に、どの先へ送るかを決めるのはあなたです。</p>
+        <table class="file-table">
+          <thead>
+            <tr><th>形式</th><th>中身</th><th>無料か買い切りか</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CSV</td>
+              <td>明細表。1 行に 1 件</td>
+              <td>ずっと無料</td>
+            </tr>
+            <tr>
+              <td>Excel（.xlsx）</td>
+              <td>明細・カテゴリ・チャネル・月次・説明の 5 シート。金額は数値なので、そのまま合計できます</td>
+              <td>買い切りで解除</td>
+            </tr>
+            <tr>
+              <td>月次レポート（.pdf）</td>
+              <td>1 ページ。いくら稼いだか、1 日に最低いくら売ればよいか、どれだけコストがかかっているか</td>
+              <td>買い切りで解除</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="highlight-box">
+          生成されたファイルは丸ごとあなたの手の中にあります。誰に送ったか、私たちは知りません。共有パネル以降のすべては、あなたと受取人のあいだで起こります。私たちにはファイルを受け取る仕組みも、送信した中身を読む手段もありません。
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">9 · 機種変更・アンインストール・バックアップ</p>
+      <div class="article">
+        <ul>
+          <li><strong>App をアンインストールすると、データも一緒に消えます。</strong>iOS は App をアンインストールするとき、サンドボックスコンテナもまとめて削除します。他の App が読める場所に残ることはありません。</li>
+          <li><strong>機種変更。</strong>MarginBook は iCloud / CloudKit の同期を行いません。2 台の間には自動的な経路がありません。データを持ち出す方法は 2 つ。① 「設定 › データ › データを書き出す › CSV を書き出す（ずっと無料）」でファイルを生成し、「ファイル」App に保存するか、自分宛てに送信する —— ただし CSV はあなたや会計が見るための形式で、App へ読み込むためのインポート形式ではありません。② iOS のデバイスバックアップ（iCloud バックアップ、または PC に接続して行うバックアップ）で App のデータごと移行する。前提は、バックアップにこの App が含まれていることです。</li>
+          <li><strong>iCloud バックアップは切り分けて考えます。</strong>端末で iCloud バックアップを有効にしている場合、App サンドボックスの中身は、ほかの App のデータと一緒に、iOS が暗号化して Apple にバックアップします。それは OS のデバイスバックアップであり、私たちのサーバーによる同期ではありません —— 私たちにサーバーはなく、そのバックアップを読むこともできません。</li>
+          <li><strong>App の再インストール。</strong>App 自体はダウンロードし直せます。買い切りの権利はストアのサンドボックスにあるので、再インストール後「設定 › フル版をアンロック › 購入を復元」を押せば取り戻せます。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">10 · 子どものプライバシー</p>
+      <div class="article">
+        <p>MarginBook は 13 歳以下の子どもを対象として設計しておらず、子どもの個人情報を意図的に（knowingly）収集することもありません。そもそも個人情報を収集しないので、この条に例外はありません。</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">11 · あなたの権利</p>
+      <div class="article">
+        <table class="file-table">
+          <thead>
+            <tr><th>したいこと</th><th>やり方</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>記録した内容を見る</td><td>ホームと「明細」ページに 1 件ずつ出ています</td></tr>
+            <tr><td>1 件を編集する</td><td>明細ページでその 1 件を押して編集</td></tr>
+            <tr><td>1 件、または全部を削除する</td><td>明細ページで削除するか、App をそのままアンインストールする</td></tr>
+            <tr><td>データを持ち出す</td><td>設定 › データ › データを書き出す › CSV を書き出す（ずっと無料）</td></tr>
+            <tr><td>権限を取り消す</td><td>この App に取り消せる権限はありません</td></tr>
+            <tr><td>別のことを聞く</td><td>メールを送ってください。アドレスはこのページの下にあります</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">12 · ポリシーの変更</p>
+      <div class="article">
+        <p>本ポリシーを変更した場合、このページ上部の有効日も同じように変更します。App 内の「設定 › このアプリについて › 利用規約とプライバシー」の画面にも同期されます。収集の範囲が変わる変更については、App のバージョン履歴にも明記します。</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">13 · 本ポリシーの正式 URL</p>
+      <div class="article">
+        <p>本ポリシーの正式 URL（誰かから転送されたコピーを持っている場合は、このアドレスを基準にしてください）：</p>
+        <p><a href="https://cosmopolition.github.io/marginBook-support/privacy.html">https://cosmopolition.github.io/marginBook-support/privacy.html</a></p>
+        <p>質問や、記述の誤りを見つけた場合はメールを送ってください。アドレスはこのページの下にあります。1 通ずつ読み、1 通ずつ返信します。</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">14 · お問い合わせ</p>
+      <div class="article">
+        <p>プライバシーに関するメールは、1 通ずつ読み、1 通ずつ返信します。メールには次を添えてください：端末のモデルと OS のバージョン、App のバージョン番号、当時の操作内容。画面のスクリーンショットがあればそれもどうぞ —— ただし<strong>帳簿の中身を送る必要はありません</strong>。問題の再現に取引の明細は必要ありません。</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <div class="contact-section">
+      <h2>ご不明な点は？</h2>
+      <p>プライバシーに関するメールは、1 通ずつ読み、1 通ずつ返信します。</p>
+      <a href="mailto:peer2peer.wang@gmail.com" class="contact-btn">✉ メールで問い合わせる</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 MarginBook · 帳簿はこの端末の中だけに · <a href="mailto:peer2peer.wang@gmail.com">お問い合わせ</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

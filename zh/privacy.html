@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MarginBook 隐私政策 —— 不收集、不上传、无账号、不申请任何系统权限。账本只存在你自己的设备上；唯一的联网是 App Store 的购买与恢复购买。">
+  <title>隐私政策 — MarginBook</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="support.html" class="logo"><span class="mark"></span>MarginBook<span class="latin">Break-Even</span></a>
+    <nav class="lang-switch">
+      <a href="../en/privacy.html">EN</a>
+      <a href="#" class="active">中文</a>
+      <a href="../ja/privacy.html">日本語</a>
+      <a href="../ko/privacy.html">한국어</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="hero">
+      <span class="badge">隐私政策</span>
+      <h1>这本账本只在你自己的手机上</h1>
+      <p>MarginBook 是一个离线的摆摊算账 App：没有账号、没有服务器、没有统计 SDK。你记的每一笔收入和成本都写在这台设备本地，我们看不到，也拿不走。</p>
+      <p class="updated">生效日期 2026-11-24　·　适用版本 1.0.0　·　适用于 iOS 17 及以上的 iPhone 与 iPad</p>
+    </div>
+
+    <nav class="nav-pills">
+      <a href="privacy.html" class="active">隐私政策</a>
+      <a href="support.html">帮助中心</a>
+    </nav>
+
+    <section>
+      <p class="section-title">1 · 一句话版本</p>
+      <div class="article">
+        <div class="highlight-box green">
+          <strong>我们不收集你的任何个人信息。</strong>MarginBook 是一本只存在你这台设备上的账本：没有账号、没有邮箱、没有设备标识符、没有广告标识符（IDFA）、没有埋点统计、没有崩溃上报、没有第三方 SDK。你的数据既不会被上传，也不会因为不续费被锁住或删除。
+        </div>
+        <p>唯一一次「出站」发生在你点「买断解锁」或「恢复购买」的时候 —— 那一刻是 Apple 的 App Store 在跟你通信，我们看不到你的 Apple ID、支付方式或账单。除此之外，App 不发任何请求、不连任何服务器。</p>
+        <p>下面逐条写清楚：它在你设备上留了什么、我们没做什么、以及你有哪些办法把它拿走或删掉。</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">2 · 我们明确不做的事</p>
+      <div class="article">
+        <ul>
+          <li><strong>不收集个人信息。</strong>没有账号，没有邮箱，没有手机号，没有设备标识符（IDFA），也没有广告追踪。</li>
+          <li><strong>没有第三方 SDK。</strong>工程里只有一个本地的计算引擎包，没有分析统计、没有崩溃上报、没有广告 SDK、没有后台服务器。</li>
+          <li><strong>不申请任何系统权限。</strong>App 的 Info.plist 里一条权限用途说明都没有 —— 相机、照片、位置、麦克风、通讯录、日历，一个都不申请。</li>
+          <li><strong>不碰你的照片和文件。</strong>App 没有选图功能，也不读相册，所以不存在「照片里的 GPS 坐标被读走」这种事。</li>
+          <li><strong>不做追踪。</strong>Info.plist 里 NSPrivacyTracking 为 false，追踪域名列表是空的。</li>
+          <li><strong>不替你做任何决定。</strong>不推送营销通知，不做用户画像，不把你拉进任何社交或排行功能。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">3 · App 在你这台设备上记了什么</p>
+      <div class="article">
+        <p>全部写在 iOS 给这个 App 分配的<strong>私有沙盒容器</strong>里 —— 别的 App 没有权限读它。</p>
+        <table class="file-table">
+          <thead>
+            <tr><th>记什么</th><th>里面具体是什么</th><th>存在哪</th><th>留多久</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>账本记录</td>
+              <td>每一笔的金额、分类、渠道、日期、备注（备注默认是空的）</td>
+              <td>App 沙盒里的本地数据库（SwiftData）</td>
+              <td>直到你删掉它或卸载 App</td>
+            </tr>
+            <tr>
+              <td>收款渠道 / 分类</td>
+              <td>渠道名与平台费率、分类名与它归属的桶（收入 / 成本 / 固定成本 / 其他支出）</td>
+              <td>同一个本地数据库</td>
+              <td>同上</td>
+            </tr>
+            <tr>
+              <td>设置偏好</td>
+              <td>界面语言、货币、市场、主题、是否看过引导页</td>
+              <td>系统偏好存储（UserDefaults）</td>
+              <td>同上</td>
+            </tr>
+            <tr>
+              <td>买断状态</td>
+              <td>一个「已解锁」的标记</td>
+              <td>系统偏好存储（UserDefaults）</td>
+              <td>同上</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>这些记录里没有你的身份</h3>
+        <p>数据库里没有姓名、没有手机号、没有位置、没有照片、没有设备标识符。一条记录大致就是：金额、分类、渠道、日期、备注。备注是你自己写的，写什么由你决定，写完就只是本机的一个字符串。</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">4 · 系统权限：一个都不申请</p>
+      <div class="article">
+        <p>MarginBook 的 Info.plist 里<strong>没有任何一条权限用途说明</strong>（NS*UsageDescription）。所以下面这些权限，系统根本不会向你弹窗：</p>
+        <ul>
+          <li>相机、麦克风、照片库、相册 —— 不申请，代码里也没有相关调用</li>
+          <li>位置（使用期间 / 始终）—— 不申请，不换算坐标，不留位置历史</li>
+          <li>通讯录、日历、提醒事项、健康数据、蓝牙 —— 不申请</li>
+          <li>追踪（App Tracking Transparency）—— 不申请，也不用</li>
+        </ul>
+        <p>会弹出的系统窗口只有两个：Apple 的购买确认框，和你点导出时拉起的系统分享面板。两者都由系统绘制。</p>
+        <h3>两个「必要原因 API」</h3>
+        <p>App 确实用到了两个 iOS 划定的必要原因 API，它们已在 App 的隐私清单里申报，理由码随 App 一起提交：UserDefaults（存货币、语言、买断状态 —— 都是设置项，不含你的账目）与文件时间戳（导出文件名上带导出时刻）。这两个 API 都不涉及读取你的任何个人数据。</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">5 · 网络：唯一的出站是 App Store</p>
+      <div class="article">
+        <p>MarginBook 的代码里没有一行网络请求 —— 不是「承诺不传」，是那段代码根本不存在。App 里也没有任何服务器地址。</p>
+        <p>唯一会发生网络通信的是 App Store 结算，一共三个动作：</p>
+        <table class="file-table">
+          <thead>
+            <tr><th>动作</th><th>什么时候发生</th><th>谁在通信</th><th>我们能拿到什么</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>拉商品与价格</td>
+              <td>你打开设置页时</td>
+              <td>你的设备 ↔ Apple 的 App Store</td>
+              <td>商品名称，以及你所在商店地区的本地化价格（价格文字由 StoreKit 返回，不是我们写死的）</td>
+            </tr>
+            <tr>
+              <td>买断</td>
+              <td>你点「买断解锁」并通过 Apple 的确认</td>
+              <td>同上</td>
+              <td>交易凭证。验证通过后，我们只在本机记下「已解锁」这个标记</td>
+            </tr>
+            <tr>
+              <td>恢复购买</td>
+              <td>你点「恢复购买」</td>
+              <td>同上</td>
+              <td>同上 —— 用来确认这台设备对应的 Apple 账号买过</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="highlight-box seal">
+          <strong>恢复购买同样会联网。</strong>很多人以为「只有付款那一刻才联网」，但非消耗型商品的恢复购买要去商店沙盒里查一遍你的凭证 —— 所以准确的说法是：<strong>购买或恢复购买时会联网</strong>，而平时记账、看报表、导出，一概不联网。
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">6 · App Store 隐私标签对照</p>
+      <div class="article">
+        <p>下面这张表和 App Store 上这个 App 的隐私标签是同一份口径。</p>
+        <table class="file-table">
+          <thead>
+            <tr><th>类别</th><th>MarginBook 的情况</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>姓名 / 邮箱 / 电话</td><td>不收集</td></tr>
+            <tr><td>位置</td><td>不收集（也不申请权限）</td></tr>
+            <tr><td>照片或视频</td><td>不收集（没有选图功能）</td></tr>
+            <tr><td>用户内容</td><td>你写的备注只存在本机，不上传</td></tr>
+            <tr><td>浏览历史 / 搜索历史</td><td>不适用</td></tr>
+            <tr><td>标识符</td><td>不收集（不含 IDFA，也不含设备 ID）</td></tr>
+            <tr><td>购买历史</td><td>不由我们收集。交易由 Apple 处理，我们只在本机记一个「已解锁」标记</td></tr>
+            <tr><td>使用数据 / 诊断</td><td>不收集</td></tr>
+            <tr><td>崩溃统计</td><td>不收集（App 里没有崩溃上报 SDK）</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">7 · 数据安全与保留</p>
+      <div class="article">
+        <ul>
+          <li><strong>存在哪。</strong>App 沙盒的本地目录。iOS 为每个 App 分配私有容器，其它 App 没有权限读。</li>
+          <li><strong>加不加密。</strong>我们不做应用层加密 —— 这是有意的取舍：明文换来「你随时能自己打开核对」。代价是没有额外一层保护，这一点写在这里，不假装有。设备本身的锁屏与文件保护（Data Protection）仍然由 iOS 生效。</li>
+          <li><strong>留多久。</strong>直到你删掉它、卸载 App，或抹掉设备。</li>
+          <li><strong>我们这边有没有副本。</strong>没有。我们没有服务器、没有备份服务、没有后台任务在传数据，所以也就不存在「我们留着一份」这回事。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">8 · 导出与分享：数据出海的唯一出口是你自己</p>
+      <div class="article">
+        <p>App 里有一个「设置 › 数据 › 导出数据」。点它会在 App 的临时目录里生成一个文件，然后拉起系统的分享面板，由你决定发给谁、发去哪。</p>
+        <table class="file-table">
+          <thead>
+            <tr><th>格式</th><th>里面是什么</th><th>免费还是买断</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CSV</td>
+              <td>明细表，一行一笔</td>
+              <td>永远免费</td>
+            </tr>
+            <tr>
+              <td>Excel（.xlsx）</td>
+              <td>明细、分类、渠道、月度、说明 5 张表；金额是数字，可以直接求和</td>
+              <td>买断解锁</td>
+            </tr>
+            <tr>
+              <td>月度经营报告（.pdf）</td>
+              <td>一页纸：赚了多少、每天最少要卖多少、哪三项最费钱</td>
+              <td>买断解锁</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="highlight-box">
+          文件生成之后完全在你手上。我们不知道你把它发给了谁 —— 分享面板之后的每一步，都发生在你和收件人之间，我们既没有收文件的接口，也读不到你发出去的内容。
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">9 · 换设备、卸载与备份</p>
+      <div class="article">
+        <ul>
+          <li><strong>卸载 App = 数据一起删掉。</strong>iOS 卸载 App 时会连同它的沙盒容器一起删除，不会留在别的 App 读得到的地方。</li>
+          <li><strong>换手机。</strong>MarginBook 不做 iCloud / CloudKit 同步，两台设备之间没有自动通路。带走数据有两条路：① 用「导出数据 › 导出 CSV」生成文件，存进「文件」App 或发给自己 —— 注意 CSV 是给你看、给会计看的格式，不是给 App 读的导入格式；② 靠 iOS 的设备备份（iCloud 备份或连接电脑备份）迁移整个 App 数据，前提是你的备份里包含这个 App。</li>
+          <li><strong>iCloud 备份要说清楚。</strong>如果你的设备开了 iCloud 备份，App 沙盒里的东西会被 iOS 连同其它 App 的数据一起加密备份到 Apple。那是操作系统的设备备份，不是我们的服务器同步 —— 我们既没有服务器，也读不到那份备份。</li>
+          <li><strong>重装 App。</strong>App 本身可以重新下载。已买断的权益在商店沙盒里，重装后点「恢复购买」就能找回。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">10 · 儿童隐私</p>
+      <div class="article">
+        <p>MarginBook 不面向 13 岁以下的儿童设计，也不 knowingly 收集儿童的个人信息。因为它压根不收集个人信息，所以这一条没有例外情况。</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">11 · 你的权利</p>
+      <div class="article">
+        <table class="file-table">
+          <thead>
+            <tr><th>你想做的事</th><th>怎么做</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>看我记了什么</td><td>首页与「账本」页逐条列出</td></tr>
+            <tr><td>改一笔</td><td>在账本页点那一笔 → 编辑</td></tr>
+            <tr><td>删一笔或全部</td><td>在账本页删除，或直接卸载 App</td></tr>
+            <tr><td>把数据拿走</td><td>设置 › 数据 › 导出数据 › 导出 CSV（永远免费）</td></tr>
+            <tr><td>撤回某个权限</td><td>本 App 没有可撤回的权限</td></tr>
+            <tr><td>问一个别的问题</td><td>写信给我们，页面底部有地址</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">12 · 政策变更</p>
+      <div class="article">
+        <p>如果这份政策有改动，本页顶部的生效日期会随之改动，App 内「设置 › 关于 › 条款与隐私」那一屏也会同步。改动涉及收集范围时，会在 App 的版本说明里写明。</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">13 · 这份政策的正式地址</p>
+      <div class="article">
+        <p>本政策的正式地址（如果你手里是别人转发的副本，以这个地址为准）：</p>
+        <p><a href="https://cosmopolition.github.io/marginBook-support/privacy.html">https://cosmopolition.github.io/marginBook-support/privacy.html</a></p>
+        <p>有问题或者发现我们写错了，写信给我们，页面底部有地址。每封邮件我们都会读，也都会回。</p>
+      </div>
+    </section>
+
+    <section>
+      <p class="section-title">14 · 联系我们</p>
+      <div class="article">
+        <p>隐私相关的每封邮件我们都会读，也都会回。写信时请附上：设备型号与系统版本、App 版本号、你当时在做什么。如果能附一张界面截图更好 —— 但<strong>不用</strong>把你的账本发给我们，复现问题不需要你的流水。</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <div class="contact-section">
+      <h2>有问题？</h2>
+      <p>隐私相关的每封邮件我们都会读，也都会回。</p>
+      <a href="mailto:peer2peer.wang@gmail.com" class="contact-btn">✉ 发邮件给我们</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 MarginBook · 账本只存在你自己的设备上 · <a href="mailto:peer2peer.wang@gmail.com">联系我们</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
